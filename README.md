@@ -182,3 +182,4 @@ Neste projeto, você pode executar os seguintes scripts:
 -   `npm run lint`: Executa o linter para verificar a qualidade do código.
 
 Boa sorte!
+# teste-tecnico-fullstack
