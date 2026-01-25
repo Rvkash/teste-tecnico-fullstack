@@ -1,8 +1,11 @@
 <p align="center">
-  <img src="./assets/img.png/badge/Next.js-15%2B-black?logo=next.js)](https://nextjs.org/)
+  <img src="./assets/img.png/badge/Next.js-15%2B-black?logo=next.js)]
+  (https://nextjs.org/)
 
 📦 Inventory Manager | Teste Técnico Fullstack
-Sistema robusto para gerenciamento de inventário, focado em performance e experiência do usuário. Desenvolvido para facilitar o controle de entradas, saídas e monitoramento de estoque crítico.
+Sistema de gerenciamento de entrada e saida de estoque, Desenvolvido para facilitar o controle de entradas, saídas e monitoramento de estoque crítico.
+
+(Teste Técnico Para FullStack Júnior)
 
 🚀 Tecnologias Utilizadas
 Framework: Next.js (App Router)
@@ -66,3 +69,7 @@ Dica: Adicione isso se quiser impressionar no teste técnico.
 /prisma: Schema e configurações do banco de dados.
 
 /components: Componentes reutilizáveis (UI).
+
+Repositorio original: https://github.com/Plansul/junior-technical-assessment
+
+Feito com 💜 Rafael Linhares
