@@ -1,36 +1,37 @@
 import { NextResponse } from 'next/server';
-import * as repo from '@/repositories/estoque.repository';
+import * as EstoqueRepository from '@/repositories/estoque.repository';
 
-// GET para listar o estoque e histórico
 export async function GET() {
   try {
-    const estoque = await repo.getEstoqueAtual();
-    const historico = await repo.getHistoricoMovimentacoes();
+    const [estoque, historico] = await Promise.all([
+      EstoqueRepository.getEstoqueAtual(),
+      EstoqueRepository.getHistoricoMovimentacoes()
+    ]);
     
-    // Serializando BigInt para não dar erro 500 novamente!
-    const data = JSON.parse(JSON.stringify({ estoque, historico }, (k, v) => 
-      typeof v === 'bigint' ? v.toString() : v
+    const data = JSON.parse(JSON.stringify({ estoque, historico }, (key, value) =>
+      typeof value === 'bigint' ? value.toString() : value
     ));
 
     return NextResponse.json(data);
   } catch (error) {
-    return NextResponse.json({ error: 'Erro ao buscar dados' }, { status: 500 });
+    console.error("Erro na API de estoque:", error);
+    return NextResponse.json({ error: 'Erro ao buscar dados de estoque' }, { status: 500 });
   }
 }
 
-// POST para criar nova movimentação
-export async function POST(req: Request) {
+export async function POST(request: Request) {
   try {
-    const body = await req.json();
-    const result = await repo.registrarMovimentacao({
-      produto_id: BigInt(body.produto_id),
-      quantidade: Number(body.quantidade),
+    const body = await request.json();
+    
+    const resultado = await EstoqueRepository.registrarMovimentacao({
+      produto_id: typeof body.produto_id === 'string' ? BigInt(body.produto_id) : BigInt(Number(body.produto_id)),
+      quantidade: body.quantidade,
       tipo: body.tipo,
-      motivo: body.motivo
+      observacao: body.observacao || body.motivo || ""
     });
 
-    return NextResponse.json({ success: true });
-  } catch (error) {
-    return NextResponse.json({ error: 'Erro ao processar' }, { status: 400 });
+    return NextResponse.json(resultado);
+  } catch (error: any) {
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
