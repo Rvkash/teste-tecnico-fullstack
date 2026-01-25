@@ -1,46 +1,68 @@
-# 🚀 Guia de Uso - Sistema de Estoque
+<p align="center">
+  <img src="./assets/img.png/badge/Next.js-15%2B-black?logo=next.js)](https://nextjs.org/)
 
-Este projeto é um gerenciador de inventário desenvolvido com **Next.js 16**, **Tailwind CSS** e **PRISMA ORM**.
+📦 Inventory Manager | Teste Técnico Fullstack
+Sistema robusto para gerenciamento de inventário, focado em performance e experiência do usuário. Desenvolvido para facilitar o controle de entradas, saídas e monitoramento de estoque crítico.
 
-## ⚙️ Configuração Inicial
+🚀 Tecnologias Utilizadas
+Framework: Next.js (App Router)
 
-1. **Clone o repositório:**
-   ```bash
-   git clone [https://github.com/rvkash/teste-tecnico-fullstack.git]
-Instale as dependências:
+Estilização: Tailwind CSS
 
+Banco de Dados: PostgreSQL / Prisma ORM
+
+Linguagem: TypeScript
+
+⚙️ Configuração Inicial
+Siga os passos abaixo para rodar o projeto localmente em sua máquina.
+
+1. Clonar o Repositório
+Bash
+git clone https://github.com/rvkash/teste-tecnico-fullstack.git
+cd teste-tecnico-fullstack
+2. Instalar Dependências
 Bash
 npm install
-Configure as Variáveis de Ambiente: Crie um arquivo .env na raiz e adicione sua string de conexão:
+3. Variáveis de Ambiente
+Crie um arquivo .env na raiz do projeto e configure sua string de conexão:
 
 Snippet de código
 DATABASE_URL="postgresql://usuario:senha@localhost:5432/estoque"
-Sincronize o Banco de Dados:
-
+4. Sincronizar Banco de Dados
 Bash
 npx prisma db push
-Inicie o projeto:
-
+5. Iniciar Servidor de Desenvolvimento
 Bash
 npm run dev
-📖 Como utilizar
-Aba "Estado do Estoque"
-Visualize o saldo atual de cada produto.
+Acesse: http://localhost:3000
 
-Itens com quantidade abaixo do estoque mínimo serão destacados com a tag "Estoque Baixo".
+📖 Guia de Uso
+📊 Painel: Estado do Estoque
+Monitoramento em Tempo Real: Visualize o saldo atualizado de cada item.
 
-Use a barra de busca para filtrar por Nome ou SKU.
+Alertas Inteligentes: Itens abaixo do estoque mínimo recebem automaticamente a tag ⚠️ Estoque Baixo.
 
-Aba "Histórico"
-Acompanhe todas as entradas e saídas registradas.
+Filtros Rápidos: Busca otimizada por Nome ou SKU.
 
-Verifique a data e o motivo de cada movimentação.
+🕒 Histórico de Movimentações
+Rastreabilidade: Log completo de todas as entradas e saídas.
 
-Registrar Movimentação
-Clique no botão "+ Registrar Movimentação".
+Auditoria: Verifique datas, quantidades e os motivos de cada alteração no estoque.
 
-Selecione o produto.
+🔄 Registrar Movimentação
+Clique no botão + Registrar Movimentação.
 
-Escolha o tipo (Entrada para adicionar, Saída para remover).
+Selecione o produto desejado.
 
-Informe a quantidade e confirme. O saldo será atualizado automaticamente.
+Escolha o tipo: Entrada (Reposição) ou Saída (Venda/Baixa).
+
+Informe a quantidade e confirme. O saldo é recalculado instantaneamente.
+
+🛠️ Estrutura de Pastas (Opcional)
+Dica: Adicione isso se quiser impressionar no teste técnico.
+
+/app: Rotas e componentes de página (Next.js App Router).
+
+/prisma: Schema e configurações do banco de dados.
+
+/components: Componentes reutilizáveis (UI).
