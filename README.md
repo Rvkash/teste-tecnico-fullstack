@@ -1,13 +1,14 @@
-<p align="center">
-  <img src="./assets/img.png/badge/Next.js-15%2B-black?logo=next.js)]
-  (https://nextjs.org/)
 
-📦 Inventory Manager | Teste Técnico Fullstack
-Sistema de gerenciamento de entrada e saida de estoque, Desenvolvido para facilitar o controle de entradas, saídas e monitoramento de estoque crítico.
+
+<h2>📦 Inventory Manager | Teste Técnico Fullstack</h2>
+
+<div align="center"><img src="./assets/img.png"  width="600px"/></div>
+
+<blockquote>Sistema de gerenciamento de entrada e saida de estoque, Desenvolvido para facilitar o controle de entradas, saídas e monitoramento de estoque crítico.</blockquote>
 
 (Teste Técnico Para FullStack Júnior)
 
-🚀 Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
 Framework: Next.js (App Router)
 
 Estilização: Tailwind CSS
@@ -16,7 +17,7 @@ Banco de Dados: PostgreSQL / Prisma ORM
 
 Linguagem: TypeScript
 
-⚙️ Configuração Inicial
+## ⚙️ Configuração Inicial
 Siga os passos abaixo para rodar o projeto localmente em sua máquina.
 
 1. Clonar o Repositório
@@ -39,7 +40,7 @@ Bash
 npm run dev
 Acesse: http://localhost:3000
 
-📖 Guia de Uso
+## 📖 Guia de Uso
 📊 Painel: Estado do Estoque
 Monitoramento em Tempo Real: Visualize o saldo atualizado de cada item.
 
@@ -61,8 +62,7 @@ Escolha o tipo: Entrada (Reposição) ou Saída (Venda/Baixa).
 
 Informe a quantidade e confirme. O saldo é recalculado instantaneamente.
 
-🛠️ Estrutura de Pastas (Opcional)
-Dica: Adicione isso se quiser impressionar no teste técnico.
+## 🛠️ Estrutura de Pastas
 
 /app: Rotas e componentes de página (Next.js App Router).
 
