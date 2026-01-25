@@ -9,7 +9,7 @@
 (Teste Técnico Para FullStack Júnior)
 
 ## 🚀 Tecnologias Utilizadas
-Framework: Next.js (App Router)
+Framework: Next.js 
 
 Estilização: Tailwind CSS
 
