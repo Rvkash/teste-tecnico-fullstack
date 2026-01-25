@@ -49,9 +49,6 @@ Alertas Inteligentes: Itens abaixo do estoque mínimo recebem automaticamente a 
 Filtros Rápidos: Busca otimizada por Nome ou SKU.
 
 🕒 Histórico de Movimentações
-Rastreabilidade: Log completo de todas as entradas e saídas.
-
-Auditoria: Verifique datas, quantidades e os motivos de cada alteração no estoque.
 
 🔄 Registrar Movimentação
 Clique no botão + Registrar Movimentação.
