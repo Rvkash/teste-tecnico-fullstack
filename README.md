@@ -31,7 +31,8 @@ npm install
 Crie um arquivo .env na raiz do projeto e configure sua string de conexão:
 
 Snippet de código
-DATABASE_URL="postgresql://usuario:senha@localhost:5432/estoque"
+DATABASE_URL="postgresql://postgres:postgres@localhost:5433/postgres"
+
 4. Sincronizar Banco de Dados
 Bash
 npx prisma db push
