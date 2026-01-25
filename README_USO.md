@@ -6,7 +6,7 @@ Este projeto é um gerenciador de inventário desenvolvido com **Next.js 16**, *
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/rvkash/projeto-estoque.git]
+   git clone [https://github.com/rvkash/teste-tecnico-fullstack.git]
 Instale as dependências:
 
 Bash
