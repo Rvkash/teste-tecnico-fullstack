@@ -35,8 +35,6 @@ model estoque {
   produto_id     BigInt   @unique
   quantidade     Int      @default(0)
   atualizado_em  DateTime @default(now()) @updatedAt
-  
-  // Relação: Um registro de estoque pertence a um produto
   produto        produtos @relation(fields: [produto_id], references: [id], onDelete: Cascade)
 }
 
@@ -45,9 +43,9 @@ model estoque_movimentacoes {
   produto_id      BigInt
   quantidade      Int      // Quantidade movimentada (sempre positiva)
   tipo            String   // 'ENTRADA' ou 'SAIDA'
-  motivo          String?  // Ex: "Venda", "Devolução", "Ajuste de inventário"
+  motivo          String?  //  Ex: "Venda", "Devolução", "Ajuste de inventário"
   criado_em       DateTime @default(now())
-
-  // Relação: Uma movimentação pertence a um produto
   produto         produtos @relation(fields: [produto_id], references: [id], onDelete: Cascade)
 }
+
+
